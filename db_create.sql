@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS `ew_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` char(55) DEFAULT NULL,
+  `email` char(55) DEFAULT NULL,
+  `password` char(32) DEFAULT NULL,
+  `fio` char(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `ew_orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` INT(11) DEFAULT NULL,
+  `price` INT(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
